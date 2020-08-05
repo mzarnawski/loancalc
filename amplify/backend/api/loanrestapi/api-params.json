@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/loan-calc",
+            "lambdaFunction": "loancalculator",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "loanrestapi",
+    "apiName": "loanrestapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "loancalculator"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-loancalc-dev-204547-authRole",
+        "unAuthRoleName": "amplify-loancalc-dev-204547-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "loancalculator",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "dd10d15a"
+}

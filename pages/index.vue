@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { API } from 'aws-amplify'
+
 export default {
   data() {
     return {
@@ -59,7 +61,17 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      const apiName = 'loanrestapi'
+      const path = '/loan-calc'
+      const myInit = {}
+
+      API.get(apiName, path, myInit)
+        .then((response) => {
+          alert(response)
+        })
+        .catch((error) => {
+          console.log(error.response)
+        })
     },
     onReset(evt) {
       evt.preventDefault()
