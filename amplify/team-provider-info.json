@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-loancalc-dev-204547-authRole",
+            "UnauthRoleArn": "arn:aws:iam::634918104353:role/amplify-loancalc-dev-204547-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::634918104353:role/amplify-loancalc-dev-204547-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-loancalc-dev-204547-deployment",
+            "UnauthRoleName": "amplify-loancalc-dev-204547-unauthRole",
+            "StackName": "amplify-loancalc-dev-204547",
+            "StackId": "arn:aws:cloudformation:eu-west-1:634918104353:stack/amplify-loancalc-dev-204547/ee64bd80-d74b-11ea-a6f0-0a2aa5f0eaaa",
+            "AmplifyAppId": "d3b2ptvxunn817"
+        }
+    }
+}
