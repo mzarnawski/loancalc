@@ -1,9 +1,82 @@
 <template>
   <div class="container">
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form-group label="Loan type:">
+        <b-form-select
+          v-model="form.loan_type"
+          :options="loan_types"
+          required
+          @change="onLoanChange"
+        ></b-form-select>
+      </b-form-group>
+      <b-form-group label="Loan amount:">
+        <b-form-input
+          v-model="form.amount"
+          type="number"
+          required
+          placeholder="Enter loan amount"
+        ></b-form-input>
+      </b-form-group>
+      <b-form-group label="Loan duration:">
+        <b-form-input
+          v-model="form.duration"
+          type="number"
+          required
+          placeholder="Enter number of months"
+        ></b-form-input>
+      </b-form-group>
+      <b-form-group label="Interest:">
+        <b-form-input
+          v-model="form.interest"
+          type="number"
+          readonly
+        ></b-form-input>
+      </b-form-group>
 
+      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="reset" variant="danger">Reset</b-button>
+    </b-form>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      form: {
+        loan_type: null,
+        amount: null,
+        duration: null,
+        interest: 0,
+      },
+      loan_types: [
+        { text: 'Select One', value: null },
+        { text: 'Mortgage', value: 3.5 },
+      ],
+      show: true,
+    }
+  },
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault()
+      alert(JSON.stringify(this.form))
+    },
+    onReset(evt) {
+      evt.preventDefault()
+      // Reset our form values
+      this.form.email = ''
+      this.form.name = ''
+      // Trick to reset/clear native browser form validation state
+      this.show = false
+      this.$nextTick(() => {
+        this.show = true
+      })
+    },
+    onLoanChange(val) {
+      if (val) {
+        this.form.interest = val
+      }
+    },
+  },
+}
 </script>
