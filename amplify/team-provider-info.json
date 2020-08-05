@@ -10,6 +10,14 @@
             "StackName": "amplify-loancalc-dev-204547",
             "StackId": "arn:aws:cloudformation:eu-west-1:634918104353:stack/amplify-loancalc-dev-204547/ee64bd80-d74b-11ea-a6f0-0a2aa5f0eaaa",
             "AmplifyAppId": "d3b2ptvxunn817"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3b2ptvxunn817",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
