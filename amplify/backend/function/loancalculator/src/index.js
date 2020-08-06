@@ -22,7 +22,7 @@ exports.handler = async (event) => {
     let rate = {}
     rate.month = i
 
-    if (i === duration) {
+    if (i == duration) {
       rate.total = Math.round(principal_left * monthly_multiplier * 100) / 100
       rate.interest = Math.round(principal_left * monthly_interest * 100) / 100
       rate.principal = Math.round((rate.total - rate.interest) * 100) / 100
