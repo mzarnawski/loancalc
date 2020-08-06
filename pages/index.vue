@@ -38,18 +38,7 @@
     </b-form>
     <b-card class="mt-3" header="Your loan plan:">
       <div>
-        <span>Total</span>
-        <span>Principal</span>
-        <span>Interest</span>
-        <span>Left</span>
-      </div>
-      <div v-for="rate in loan_plan" :key="rate.month">
-        <div>
-          <span>{{ rate.total }}</span>
-          <span>{{ rate.principal }}</span>
-          <span>{{ rate.interest }}</span>
-          <span>{{ rate.principal_left }}</span>
-        </div>
+        <b-table striped hover :items="loan_plan"></b-table>
       </div>
     </b-card>
   </div>
