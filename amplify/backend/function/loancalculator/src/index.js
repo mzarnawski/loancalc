@@ -26,7 +26,7 @@ exports.handler = async (event) => {
       rate.total = Math.round(principal_left * monthly_multiplier * 100) / 100
       rate.interest = Math.round(principal_left * monthly_interest * 100) / 100
       rate.principal = Math.round((rate.total - rate.interest) * 100) / 100
-      principal_left = 0
+      rate.principal_left = 0
     } else {
       rate.total = monthly_money
       rate.interest = Math.round(principal_left * monthly_interest * 100) / 100
@@ -35,9 +35,8 @@ exports.handler = async (event) => {
         Math.round(
           (principal_left * monthly_multiplier - monthly_money) * 100
         ) / 100
+      rate.principal_left = principal_left
     }
-
-    rate.principal_left = principal_left
 
     loan_plan.push(rate)
   }

@@ -36,7 +36,7 @@
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
+    <b-card class="mt-3" header="Your loan plan:">
       <pre class="m-0">{{ loan_plan }}</pre>
     </b-card>
   </div>
