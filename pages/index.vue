@@ -78,7 +78,6 @@ export default {
       const data = this
       API.post(apiName, path, myInit)
         .then((response) => {
-          console.log(response)
           data.loan_plan = response
         })
         .catch((error) => {
