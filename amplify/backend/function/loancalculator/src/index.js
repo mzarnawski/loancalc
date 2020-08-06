@@ -1,11 +1,11 @@
 exports.handler = async (event) => {
+  const body = JSON.parse(event.body)
+
   let loan_plan = []
 
-  const total_amount = event.body.amount
-  const duration = event.body.duration
-  const interest = event.body.interest
-
-  console.log(duration)
+  const total_amount = body.amount
+  const duration = body.duration
+  const interest = body.interest
 
   const monthly_interest = interest / 100 / 12
   const monthly_multiplier = 1 + monthly_interest
