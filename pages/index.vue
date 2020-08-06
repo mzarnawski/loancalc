@@ -79,7 +79,7 @@ export default {
       API.post(apiName, path, myInit)
         .then((response) => {
           console.log(response)
-          data.loan_plan = JSON.parse(response.body)
+          data.loan_plan = response
         })
         .catch((error) => {
           console.log(error.response)
