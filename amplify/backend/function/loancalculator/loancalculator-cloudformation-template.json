@@ -69,7 +69,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-loancalc-dev-204547-deployment",
-					"S3Key": "amplify-builds/loancalculator-47614775744f41335948-build.zip"
+					"S3Key": "amplify-builds/loancalculator-656d6f594f3959736e4c-build.zip"
 				}
 			}
 		},
