@@ -75,10 +75,11 @@ export default {
         },
       }
 
+      const data = this
       API.post(apiName, path, myInit)
         .then((response) => {
           console.log(response)
-          this.loan_plan = JSON.parse(response.body)
+          data.loan_plan = JSON.parse(response.body)
         })
         .catch((error) => {
           console.log(error.response)
