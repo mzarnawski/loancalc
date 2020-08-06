@@ -59,7 +59,7 @@ export default {
         { text: 'Mortgage', value: 3.5 },
       ],
       show: true,
-      loan_plan: {},
+      loan_plan: [],
     }
   },
   methods: {
@@ -77,7 +77,8 @@ export default {
 
       API.post(apiName, path, myInit)
         .then((response) => {
-          this.loan_plan = response.body
+          console.log(response)
+          this.loan_plan = JSON.parse(response.body)
         })
         .catch((error) => {
           console.log(error.response)
