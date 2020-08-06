@@ -37,17 +37,17 @@
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
     <b-card class="mt-3" header="Your loan plan:">
+      <div>
+        <span>Total</span>
+        <span>Principal</span>
+        <span>Interest</span>
+        <span>Left</span>
+      </div>
       <div v-for="rate in loan_plan" :key="rate.month">
         <div>
           <span>{{ rate.total }}</span>
-        </div>
-        <div>
           <span>{{ rate.principal }}</span>
-        </div>
-        <div>
           <span>{{ rate.interest }}</span>
-        </div>
-        <div>
           <span>{{ rate.principal_left }}</span>
         </div>
       </div>
