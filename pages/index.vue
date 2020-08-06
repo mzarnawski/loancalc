@@ -64,9 +64,15 @@ export default {
       evt.preventDefault()
       const apiName = 'loanrestapi'
       const path = '/loan-calc'
-      const myInit = {}
+      const myInit = {
+        body: {
+          amount: this.form.amount,
+          period: this.form.duration,
+          interest: this.form.interest,
+        },
+      }
 
-      API.get(apiName, path, myInit)
+      API.post(apiName, path, myInit)
         .then((response) => {
           this.loan_plan = response.body
         })
