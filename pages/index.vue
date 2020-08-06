@@ -67,7 +67,7 @@ export default {
       const myInit = {
         body: {
           amount: this.form.amount,
-          period: this.form.duration,
+          duration: this.form.duration,
           interest: this.form.interest,
         },
       }
